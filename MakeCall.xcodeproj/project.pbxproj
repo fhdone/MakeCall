@@ -15,6 +15,12 @@
 		366A3FC21CB39C5E00A70DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366A3FC01CB39C5E00A70DE3 /* LaunchScreen.storyboard */; };
 		366A3FCD1CB39C5E00A70DE3 /* MakeCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A3FCC1CB39C5E00A70DE3 /* MakeCallTests.m */; };
 		366A3FD81CB39C5E00A70DE3 /* MakeCallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A3FD71CB39C5E00A70DE3 /* MakeCallUITests.m */; };
+		367E88041CB4E7E300B943EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A3FB91CB39C5E00A70DE3 /* ViewController.m */; };
+		367E88051CB4E7E300B943EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A3FB61CB39C5E00A70DE3 /* AppDelegate.m */; };
+		367E88061CB4E7E300B943EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A3FB31CB39C5E00A70DE3 /* main.m */; };
+		367E88091CB4E7E300B943EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366A3FC01CB39C5E00A70DE3 /* LaunchScreen.storyboard */; };
+		367E880A1CB4E7E300B943EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366A3FBE1CB39C5E00A70DE3 /* Assets.xcassets */; };
+		367E880B1CB4E7E300B943EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366A3FBB1CB39C5E00A70DE3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,8 @@
 		366A3FD31CB39C5E00A70DE3 /* MakeCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		366A3FD71CB39C5E00A70DE3 /* MakeCallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeCallUITests.m; sourceTree = "<group>"; };
 		366A3FD91CB39C5E00A70DE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		367E880F1CB4E7E300B943EC /* MakeCall-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MakeCall-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		367E88111CB4E7E300B943EC /* MakeCall copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MakeCall copy-Info.plist"; path = "/Users/fhdone/Documents/xcode_space/objectiveC/MakeCall/MakeCall copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,16 +83,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		367E88071CB4E7E300B943EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		366A3FA61CB39C5E00A70DE3 = {
 			isa = PBXGroup;
 			children = (
+				367E88101CB4E7E300B943EC /* Resources-iPad */,
 				366A3FB11CB39C5E00A70DE3 /* MakeCall */,
 				366A3FCB1CB39C5E00A70DE3 /* MakeCallTests */,
 				366A3FD61CB39C5E00A70DE3 /* MakeCallUITests */,
 				366A3FB01CB39C5E00A70DE3 /* Products */,
+				367E88111CB4E7E300B943EC /* MakeCall copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +111,7 @@
 				366A3FAF1CB39C5E00A70DE3 /* MakeCall.app */,
 				366A3FC81CB39C5E00A70DE3 /* MakeCallTests.xctest */,
 				366A3FD31CB39C5E00A70DE3 /* MakeCallUITests.xctest */,
+				367E880F1CB4E7E300B943EC /* MakeCall-iPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +156,13 @@
 				366A3FD91CB39C5E00A70DE3 /* Info.plist */,
 			);
 			path = MakeCallUITests;
+			sourceTree = "<group>";
+		};
+		367E88101CB4E7E300B943EC /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +221,23 @@
 			productReference = 366A3FD31CB39C5E00A70DE3 /* MakeCallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		367E88021CB4E7E300B943EC /* MakeCall-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 367E880C1CB4E7E300B943EC /* Build configuration list for PBXNativeTarget "MakeCall-iPad" */;
+			buildPhases = (
+				367E88031CB4E7E300B943EC /* Sources */,
+				367E88071CB4E7E300B943EC /* Frameworks */,
+				367E88081CB4E7E300B943EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MakeCall-iPad";
+			productName = MakeCall;
+			productReference = 367E880F1CB4E7E300B943EC /* MakeCall-iPad.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,7 +249,6 @@
 				TargetAttributes = {
 					366A3FAE1CB39C5E00A70DE3 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = W5GAP98U7B;
 					};
 					366A3FC71CB39C5E00A70DE3 = {
 						CreatedOnToolsVersion = 7.3;
@@ -235,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				366A3FAE1CB39C5E00A70DE3 /* MakeCall */,
+				367E88021CB4E7E300B943EC /* MakeCall-iPad */,
 				366A3FC71CB39C5E00A70DE3 /* MakeCallTests */,
 				366A3FD21CB39C5E00A70DE3 /* MakeCallUITests */,
 			);
@@ -266,6 +308,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		367E88081CB4E7E300B943EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367E88091CB4E7E300B943EC /* LaunchScreen.storyboard in Resources */,
+				367E880A1CB4E7E300B943EC /* Assets.xcassets in Resources */,
+				367E880B1CB4E7E300B943EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -292,6 +344,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				366A3FD81CB39C5E00A70DE3 /* MakeCallUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		367E88031CB4E7E300B943EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367E88041CB4E7E300B943EC /* ViewController.m in Sources */,
+				367E88051CB4E7E300B943EC /* AppDelegate.m in Sources */,
+				367E88061CB4E7E300B943EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MakeCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fhdone.MakeCall;
@@ -427,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MakeCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fhdone.MakeCall;
@@ -480,6 +544,34 @@
 			};
 			name = Release;
 		};
+		367E880D1CB4E7E300B943EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MakeCall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fhdone.MakeCall;
+				PRODUCT_NAME = "MakeCall-iPad";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		367E880E1CB4E7E300B943EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MakeCall copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fhdone.MakeCall;
+				PRODUCT_NAME = "MakeCall-iPad";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -499,6 +591,7 @@
 				366A3FDE1CB39C5E00A70DE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		366A3FDF1CB39C5E00A70DE3 /* Build configuration list for PBXNativeTarget "MakeCallTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +600,7 @@
 				366A3FE11CB39C5E00A70DE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		366A3FE21CB39C5E00A70DE3 /* Build configuration list for PBXNativeTarget "MakeCallUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +609,16 @@
 				366A3FE41CB39C5E00A70DE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		367E880C1CB4E7E300B943EC /* Build configuration list for PBXNativeTarget "MakeCall-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				367E880D1CB4E7E300B943EC /* Debug */,
+				367E880E1CB4E7E300B943EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
