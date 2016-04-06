@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *dialNumber;
+@property (weak, nonatomic) IBOutlet UIButton *dailButton;
 
 @end
 
