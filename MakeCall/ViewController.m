@@ -10,12 +10,18 @@
 
 @interface ViewController ()
 
+@property (nonatomic,assign) BOOL reDial;
+
 @end
 
 @implementation ViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.reDial = NO;
     // Do any additional setup after loading the view, typically from a nib.
     //self.dailButton.backgroundColor = [UIColor grayColor];
     
@@ -24,7 +30,10 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self.dailButton sendActionsForControlEvents:UIControlEventTouchUpInside];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(appDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
 }
 
 
@@ -35,15 +44,22 @@
 
 //http://stackoverflow.com/questions/15864364/viewdidappear-is-not-called-when-opening-app-from-background
 - (void)appDidBecomeActive:(NSNotification *)notification {
-    NSLog(@"did become active notification");
-    [self.dailButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    if(self.reDial){
+        [self.dailButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
 }
 
 
-- (IBAction)dail:(UIButton *)sender {
+- (IBAction)dailClick:(UIButton *)sender {
+    self.reDial = YES;
     NSString *phoneNumber = [@"tel://" stringByAppendingString:self.dialNumber.text];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
+
+- (IBAction)endDailClick:(UIButton *)sender {
+    self.reDial = NO;
+}
+
 
 
 @end

@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,69 +21,86 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eg-qx-W3n">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="6UE-Io-mIt"/>
-                                    <constraint firstAttribute="width" constant="250" id="vjU-j5-uFA"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" image="telephone"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6UE-Io-mIt"/>
-                                        <exclude reference="vjU-j5-uFA"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="6UE-Io-mIt"/>
-                                        <include reference="vjU-j5-uFA"/>
-                                    </mask>
-                                </variation>
+                                <state key="normal" image="phone-green2"/>
                                 <connections>
-                                    <action selector="dail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axa-8g-7JB"/>
+                                    <action selector="dailClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ON-Es-pIW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="075586913332" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCR-43-cHd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0a-Gl-AHI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="phone-red2"/>
+                                <connections>
+                                    <action selector="endDailClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tqx-fE-MBK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="075586913332" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCR-43-cHd">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vCR-43-cHd" firstAttribute="width" secondItem="5eg-qx-W3n" secondAttribute="width" id="0I5-vM-ACA"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Eu-AH-sXn"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="leading" secondItem="vCR-43-cHd" secondAttribute="leading" id="EZf-x2-Ebf"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="au9-mS-YKb"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="trailing" secondItem="vCR-43-cHd" secondAttribute="trailing" id="bCJ-Ps-X7L"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="top" secondItem="vCR-43-cHd" secondAttribute="bottom" constant="8" symbolic="YES" id="gnH-0U-Bu9"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="baseline" secondItem="O0a-Gl-AHI" secondAttribute="baseline" id="7eH-aH-KXa"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="height" secondItem="O0a-Gl-AHI" secondAttribute="height" id="BRD-Zb-EJx"/>
+                            <constraint firstItem="vCR-43-cHd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="CAk-vD-RzX"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="centerY" secondItem="O0a-Gl-AHI" secondAttribute="centerY" id="J82-jQ-cnF"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="top" secondItem="O0a-Gl-AHI" secondAttribute="top" id="MZG-EE-gU4"/>
+                            <constraint firstItem="O0a-Gl-AHI" firstAttribute="leading" secondItem="5eg-qx-W3n" secondAttribute="trailing" constant="60" id="NIV-fK-QuG"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="width" secondItem="O0a-Gl-AHI" secondAttribute="height" multiplier="1:1" id="Pk1-W9-qeF"/>
+                            <constraint firstItem="O0a-Gl-AHI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rfy-ap-pDF"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UYA-QN-Zaj"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="centerY" secondItem="O0a-Gl-AHI" secondAttribute="centerY" id="X03-rT-T0q"/>
+                            <constraint firstItem="vCR-43-cHd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ltw-bV-LgY"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="top" secondItem="vCR-43-cHd" secondAttribute="bottom" constant="85" id="mNh-hD-20H"/>
+                            <constraint firstItem="vCR-43-cHd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSn-HL-gPe"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="width" secondItem="O0a-Gl-AHI" secondAttribute="width" id="pcu-69-Xga"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="5eg-qx-W3n"/>
+                                <exclude reference="O0a-Gl-AHI"/>
                                 <exclude reference="vCR-43-cHd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0I5-vM-ACA"/>
-                                <exclude reference="7Eu-AH-sXn"/>
-                                <exclude reference="EZf-x2-Ebf"/>
-                                <exclude reference="au9-mS-YKb"/>
-                                <exclude reference="bCJ-Ps-X7L"/>
-                                <exclude reference="gnH-0U-Bu9"/>
+                                <exclude reference="CAk-vD-RzX"/>
+                                <exclude reference="ltw-bV-LgY"/>
+                                <exclude reference="oSn-HL-gPe"/>
+                                <exclude reference="7eH-aH-KXa"/>
+                                <exclude reference="BRD-Zb-EJx"/>
+                                <exclude reference="J82-jQ-cnF"/>
+                                <exclude reference="MZG-EE-gU4"/>
+                                <exclude reference="Pk1-W9-qeF"/>
+                                <exclude reference="UYA-QN-Zaj"/>
+                                <exclude reference="X03-rT-T0q"/>
+                                <exclude reference="mNh-hD-20H"/>
+                                <exclude reference="pcu-69-Xga"/>
+                                <exclude reference="NIV-fK-QuG"/>
+                                <exclude reference="Rfy-ap-pDF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="5eg-qx-W3n"/>
+                                <include reference="O0a-Gl-AHI"/>
                                 <include reference="vCR-43-cHd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0I5-vM-ACA"/>
-                                <include reference="7Eu-AH-sXn"/>
-                                <include reference="EZf-x2-Ebf"/>
-                                <include reference="au9-mS-YKb"/>
-                                <include reference="bCJ-Ps-X7L"/>
-                                <include reference="gnH-0U-Bu9"/>
+                                <include reference="CAk-vD-RzX"/>
+                                <include reference="ltw-bV-LgY"/>
+                                <include reference="oSn-HL-gPe"/>
+                                <include reference="7eH-aH-KXa"/>
+                                <include reference="BRD-Zb-EJx"/>
+                                <include reference="J82-jQ-cnF"/>
+                                <include reference="MZG-EE-gU4"/>
+                                <include reference="Pk1-W9-qeF"/>
+                                <include reference="UYA-QN-Zaj"/>
+                                <include reference="X03-rT-T0q"/>
+                                <include reference="mNh-hD-20H"/>
+                                <include reference="pcu-69-Xga"/>
+                                <include reference="NIV-fK-QuG"/>
+                                <include reference="Rfy-ap-pDF"/>
                             </mask>
                         </variation>
                     </view>
@@ -96,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="telephone" width="235" height="235"/>
+        <image name="phone-green2" width="300" height="300"/>
+        <image name="phone-red2" width="300" height="300"/>
     </resources>
 </document>
