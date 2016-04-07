@@ -29,7 +29,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.dailButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    //[self.dailButton sendActionsForControlEvents:UIControlEventTouchUpInside];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(appDidBecomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification

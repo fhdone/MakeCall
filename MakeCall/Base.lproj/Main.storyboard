@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -53,7 +54,9 @@
                             <constraint firstItem="5eg-qx-W3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UYA-QN-Zaj"/>
                             <constraint firstItem="5eg-qx-W3n" firstAttribute="centerY" secondItem="O0a-Gl-AHI" secondAttribute="centerY" id="X03-rT-T0q"/>
                             <constraint firstItem="vCR-43-cHd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ltw-bV-LgY"/>
-                            <constraint firstItem="5eg-qx-W3n" firstAttribute="top" secondItem="vCR-43-cHd" secondAttribute="bottom" constant="85" id="mNh-hD-20H"/>
+                            <constraint firstItem="5eg-qx-W3n" firstAttribute="top" secondItem="vCR-43-cHd" secondAttribute="bottom" constant="85" id="mNh-hD-20H">
+                                <variation key="widthClass=compact" constant="208"/>
+                            </constraint>
                             <constraint firstItem="vCR-43-cHd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSn-HL-gPe"/>
                             <constraint firstItem="5eg-qx-W3n" firstAttribute="width" secondItem="O0a-Gl-AHI" secondAttribute="width" id="pcu-69-Xga"/>
                         </constraints>
